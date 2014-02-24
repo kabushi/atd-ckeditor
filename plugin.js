@@ -183,7 +183,7 @@ function setupCKEditorInstance(editor, path) {
 		var atd_api_key  = editor.config.atd_api_key;
 
 		/* post the editor contents to the AtD service */	
-		var results = post_to_AtD(proxy_server + '/checkDocument', 'data=' + encodeURI(editor_contents).replace(/&/g, '%26') + '&key=' + atd_api_key, errors_received);
+		var results = post_to_AtD(proxy_server, 'data=' + encodeURI(editor_contents).replace(/&/g, '%26') + '&key=' + atd_api_key, errors_received);
 	};
 
 	return proofread_action;
